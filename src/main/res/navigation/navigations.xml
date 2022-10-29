@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigations"
+    app:startDestination="@id/papaFragment">
+
+    <fragment
+        android:id="@+id/papaFragment"
+        android:name="com.example.android.aicamera.PapaFragment"
+        android:label="PapaFragment" >
+        <action
+            android:id="@+id/action_papaFragment_to_infoFragment"
+            app:destination="@id/infoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_papaFragment_to_objCamera"
+            app:destination="@id/objCamera"
+            app:popUpTo="@id/infoFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_papaFragment_to_faceDetection"
+            app:destination="@id/faceDetection"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_papaFragment_to_imageLabelling"
+            app:destination="@id/imageLabelling"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_papaFragment_to_poseEstimation"
+            app:destination="@id/poseEstimation"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.android.aicamera.InfoFragment"
+        android:label="InfoFragment" >
+        <argument
+            android:name="type"
+            app:argType="string"
+            android:defaultValue="object detection" />
+        <action
+            android:id="@+id/action_infoFragment_to_objCamera"
+            app:destination="@id/objCamera"
+            app:popUpTo="@id/infoFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_infoFragment_to_faceDetection"
+            app:destination="@id/faceDetection"
+            app:popUpTo="@id/infoFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_infoFragment_to_imageLabelling"
+            app:destination="@id/imageLabelling"
+            app:popUpTo="@id/infoFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_infoFragment_to_poseEstimation"
+            app:destination="@id/poseEstimation"
+            app:popUpTo="@id/infoFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/objCamera"
+        android:name="com.example.android.aicamera.ObjCamera"
+        android:label="ObjCamera" />
+    <fragment
+        android:id="@+id/faceDetection"
+        android:name="com.example.android.aicamera.FaceDetection"
+        android:label="FaceDetection" />
+    <fragment
+        android:id="@+id/imageLabelling"
+        android:name="com.example.android.aicamera.ImageLabelling"
+        android:label="ImageLabelling" />
+    <fragment
+        android:id="@+id/poseEstimation"
+        android:name="com.example.android.aicamera.PoseEstimation"
+        android:label="PoseEstimation" />
+</navigation>
